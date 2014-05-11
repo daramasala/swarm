@@ -1,0 +1,11 @@
+<template name="taskPage">
+    {{>taskItem}}
+    <div class="contributions">
+        <h4>Contributions</h4>
+        <div>
+            {{#each contributions}}
+            <div class="contribution"><h5><span>{{quantity}}</span><a href="#">{{description}}</a></h5></div>
+            {{/each}}
+        </div>
+    </div>
+</template>
