@@ -11,11 +11,12 @@ Template.taskSubmit.events({
 
         Meteor.call('newTask', task, function(error, id) {
             if (error) {
-                throwError(error.reason);
+                Messages.add(error.reason, 'error');
 
                 if (error.error === 302)
                     Router.go('taskPage', {_id: error.details});
             } else {
+                Messages.add("Task '" + task.title + "' created", "success");
                 Router.go('taskPage', {_id: id});
             }
         });

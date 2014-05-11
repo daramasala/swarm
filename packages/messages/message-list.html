@@ -1,13 +1,13 @@
-<template name="meteorErrors">
+<template name="meteorMessages">
     <div class="errors row-fluid">
-        {{#each errors}}
-        {{>meteorError}}
+        {{#each messages}}
+        {{>meteorMessage}}
         {{/each}}
     </div>
 </template>
 
-<template name="meteorError">
-    <div class="alert alert-error">
+<template name="meteorMessage">
+    <div class="alert alert-{{type}}">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         {{message}}
     </div>

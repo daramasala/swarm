@@ -75,16 +75,6 @@ body {
     margin-left: 5px;
 }
 
-.contributions .contribution h5 span {
-    font-weight: normal;
-    font-size: 14px;
-    display: inline-block;
-    color: #ffffff;
-    background-color: #00ff00;
-    padding: 2px;
-    border-radius:5px;
-}
-
 .task .task-content p {
     margin: 0
 }

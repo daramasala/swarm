@@ -11,8 +11,8 @@ Template.taskEdit.events({
 
         Tasks.update(id, {$set: task}, function(error) {
             if (error)
-                return alert(error.reason);
-
+                return Messages.add(error.reason, 'error');
+            Messages.add("Task '" + task.title + "' updated", "success")
             Router.go('taskPage', {_id: id});
         });
     },
@@ -21,7 +21,9 @@ Template.taskEdit.events({
 
         if (confirm("Delete this task?")) {
             var id = this._id;
+            var title = $(e.target).find('[name=title]').val();
             Tasks.remove(id);
+            Messages.add("Task '" + title + "' deleted", "warning");
             Router.go('tasksList');
         }
     }

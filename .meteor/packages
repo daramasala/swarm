@@ -10,4 +10,4 @@ bootstrap
 accounts-ui-bootstrap-dropdown
 spin
 iron-router
-errors
+messages
