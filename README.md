@@ -1,6 +1,20 @@
 ## Collaborative Platform
 
-This is a first attempt at the implementation of the 
+This is a first attempt at the implementation of the collaborative platform.
+
+### The Code
+The code is based on the 'Microscope' application developed in the 'Discover Meteor' book. 
+It is straightforward meteor code, nothing fancy. The only addition is the messages package which can be used to display messages to the user that disappear after he navigates to another page. It is useful for messages such as "task created" or "task deleted".
+
+To use it you call `Messages.add(message, type)` where `message` is a string of the message and `type` is a string with the type of the message, e.g. `'error'`. Error messages will be displayed in red, warning in yellow, etc. Check out the possible values in messages.js:
+```
+Messages.add('Task updated', 'info');
+```
+
+Check out task-submit.js for an example of how to use it. 
+
+
+### Building and Running
 
 in order to prepare a new ubuntu 13.10 machine for running this you should install the following packages like that:
 
